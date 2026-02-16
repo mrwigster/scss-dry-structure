@@ -1,0 +1,60 @@
+name: Feature request
+description: Suggest improvements to skill behavior, prompts, or audit capabilities.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposals with concrete examples are easiest to implement and test.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What pain point are you trying to fix?
+      placeholder: The skill currently struggles when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What should change?
+      placeholder: Add a workflow step to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompts
+    attributes:
+      label: Example user prompts
+      description: What prompts should trigger this behavior?
+      placeholder: |
+        - "Refactor this SCSS module..."
+        - "Find existing mixins for..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will we know this is done?
+      placeholder: |
+        - Supports...
+        - Produces...
+        - Avoids...
+    validations:
+      required: false
+
+  - type: input
+    id: impact
+    attributes:
+      label: Expected impact
+      description: Rough impact (time saved, consistency, fewer regressions, etc.).
+      placeholder: Cuts duplicate SCSS edits by...
+    validations:
+      required: false

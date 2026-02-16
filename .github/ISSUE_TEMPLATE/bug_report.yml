@@ -1,0 +1,85 @@
+name: Bug report
+description: Report unexpected behavior in the skill workflow, docs, or audit script.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this. Please provide enough detail for us to reproduce quickly.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is broken?
+      placeholder: The audit script fails on...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+      placeholder: The skill should have...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+      placeholder: It produced...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Exact steps/commands to reproduce.
+      placeholder: |
+        1. Run ...
+        2. Ask Codex ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: repo-context
+    attributes:
+      label: Project context
+      description: Share your SCSS structure or relevant files/folders.
+      placeholder: sass/, abstracts/, components/, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error output
+      description: Paste terminal output, stack traces, or lint output.
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Skill version
+      description: Which release/version are you using?
+      placeholder: v1.1.0
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, shell, and tooling versions if relevant.
+      placeholder: macOS 15.x, zsh, rg 14.x
+    validations:
+      required: false
