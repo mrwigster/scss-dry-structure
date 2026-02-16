@@ -58,7 +58,7 @@ rg -n '@include\s+[a-zA-Z0-9_-]+' <scss-root> -g '*.scss'
 - `layouts/`: structural page/layout rules.
 - `components/`: reusable UI blocks.
 - `plugins/` or integration folders: third-party overrides.
-- `btt/` or equivalent brand layer: bespoke project-specific styling.
+- `theme/`, `custom/`, or equivalent brand layer: bespoke project-specific styling.
 
 ## Completion Checklist
 

@@ -21,19 +21,18 @@ Use this reference after running `scripts/scss_audit.sh` to decide placement and
 - Use BEM (`block__element--modifier`) only where BEM is already part of that module.
 - Keep third-party selectors unchanged and wrap custom logic around them.
 
-## BTT2021 Theme Snapshot
+## Typical WordPress SCSS Snapshot
 
-This snapshot is based on the `btt2021` theme structure:
+Use this as a default map when a project follows a partial-based Sass architecture:
 
-- Primary SCSS root: `sass/`
-- Main entrypoint: `sass/style.scss`
-- Bespoke layer entrypoint: `sass/btt/_styles.scss` (imported from `sass/style.scss`)
-- Global variables: `sass/abstracts/variables/`
-- Project variables: `sass/btt/_vars.scss`
-- Global mixins: `sass/abstracts/mixins/_mixins.scss`
-- Responsive mixins: `sass/btt/_mediaq.scss` (`desktop`, `wide`, `lessThanDesktop`, `tablet`, `lessThanTablet`, `mobile`)
-- Common custom naming style: kebab-case component classes with nested child selectors
-- BEM-like selectors mostly appear in WordPress/WooCommerce/plugin classes (for example `woocommerce-cart-form__cart-item`, `select2-selection--single`)
+- Primary SCSS root: `sass/` or `scss/`
+- Main entrypoint: `sass/style.scss` or `scss/main.scss`
+- Global variables: `abstracts/variables/` (or similarly named token folder)
+- Global mixins: `abstracts/mixins/` (or similarly named utilities folder)
+- Responsive mixins often live in a dedicated partial such as `_mediaq.scss`, `_breakpoints.scss`, or `mixins/_responsive.scss`
+- Project-specific overrides commonly live in dedicated folders like `theme/`, `custom/`, or `brand/`
+- Common custom naming style is often kebab-case component classes with nested child selectors
+- BEM-like selectors often appear in plugin/framework markup classes (for example `__` and `--` forms)
 
 ## Useful Checks
 
