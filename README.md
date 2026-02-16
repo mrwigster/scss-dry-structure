@@ -1,23 +1,30 @@
-# scss-dry-structure
+# SCSS DRY Structure
 
-A Codex skill for SCSS-first, DRY styling workflows.
+![Version](https://img.shields.io/badge/version-v1.1.0-0f766e)
+![Codex Skill](https://img.shields.io/badge/codex-skill-0ea5e9)
+![SCSS First](https://img.shields.io/badge/scss-first-334155)
 
-Use this skill when adding or modifying styles so Codex:
+![SCSS DRY Structure Banner](./assets/scss-dry-structure-banner.svg)
 
-- follows your existing Sass file structure
-- reuses existing variables/mixins before creating new ones
-- keeps nesting maintainable
-- matches local naming patterns (including BEM where present)
+Build SCSS changes that respect existing architecture, reuse existing tokens, and stay maintainable as the codebase grows.
 
-## Install
+## Why this skill
 
-### Install via skill-installer
+Most styling regressions happen when changes are added in the wrong place or by duplicating existing logic.  
+This skill gives Codex a strict workflow to:
+
+- map your SCSS structure before editing
+- find and reuse existing variables, mixins, and selectors
+- keep nesting shallow and readable
+- follow established naming conventions, including BEM where present
+
+## Install (30 seconds)
 
 ```bash
 $skill-installer install https://github.com/mrwigster/scss-dry-structure/tree/main
 ```
 
-### Manual install
+Manual install:
 
 ```bash
 git clone https://github.com/mrwigster/scss-dry-structure.git ~/.codex/skills/scss-dry-structure
@@ -25,26 +32,85 @@ git clone https://github.com/mrwigster/scss-dry-structure.git ~/.codex/skills/sc
 
 ## Quick Start
 
-From a project root:
+From your project root:
 
 ```bash
 export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
 "$CODEX_HOME/skills/scss-dry-structure/scripts/scss_audit.sh" sass
 ```
 
-Then implement style changes using rules in `SKILL.md`.
+Then ask Codex to implement your style change using this skill.
 
 ## Example Prompts
 
 - "Refactor this CSS block into existing SCSS partials and reuse current variables/mixins."
-- "Add responsive styles for the card component without introducing duplicate breakpoints."
-- "Find if this selector already exists and apply changes in the correct partial."
-- "Audit this theme's SCSS structure and suggest the right file placement for a new feature."
-- "Rewrite these repeated declarations into a reusable mixin and update includes."
+- "Add responsive styles for this card component without introducing duplicate breakpoints."
+- "Find whether this selector already exists and apply updates in the correct partial."
+- "Audit this SCSS folder and tell me exactly where a new feature style should live."
+- "Convert these repeated declarations into a shared mixin and replace duplicates."
+- "Check if this module should use BEM or local kebab-case based on nearby files."
+
+## Before And After
+
+Before (duplicated logic, deep selector chain):
+
+```scss
+.product-grid .card .title {
+  color: #11765f;
+  font-size: 22px;
+}
+.product-grid .card .cta {
+  color: #11765f;
+  border-radius: 10px;
+}
+```
+
+After (token reuse, cleaner structure):
+
+```scss
+$card-accent: $brand-secondary-complement;
+
+.product-grid {
+  .card {
+    &__title {
+      color: $card-accent;
+      font-size: 1.375rem;
+    }
+
+    &__cta {
+      color: $card-accent;
+      border-radius: $radiusSize;
+    }
+  }
+}
+```
+
+## Result Snapshot
+
+The bundled audit script quickly surfaces structure and conventions, for example:
+
+- SCSS root and entrypoints
+- import/use patterns already in place
+- existing mixins and most-used includes
+- BEM-style selector usage
+- potential deep selector chains to review
+
+## What It Enforces
+
+- SCSS-first placement in existing partial architecture
+- DRY-first token reuse before adding new variables/mixins
+- maintainable nesting and selector depth
+- convention matching instead of style drift
 
 ## Repository Layout
 
-- `SKILL.md`: main skill instructions and workflow
-- `scripts/scss_audit.sh`: automated SCSS structure/pattern audit
-- `references/scss-patterns.md`: architecture and naming guardrails
-- `agents/openai.yaml`: UI metadata
+- `SKILL.md`: core operating instructions for the agent
+- `scripts/scss_audit.sh`: SCSS structure and convention audit
+- `references/scss-patterns.md`: naming and architecture guardrails
+- `agents/openai.yaml`: Codex UI metadata
+- `assets/scss-dry-structure-banner.svg`: repository banner image
+
+## Release
+
+- Current release: `v1.1.0` (2026-02-16)
+- Focus: stronger onboarding, proof-oriented README, and visual polish

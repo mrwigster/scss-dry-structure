@@ -1,0 +1,52 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#1E293B" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="360" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="360" rx="24" fill="url(#grid)" opacity="0.55"/>
+
+  <text x="72" y="128" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">
+    SCSS DRY Structure
+  </text>
+  <text x="72" y="174" fill="#93C5FD" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600">
+    Codex Skill v1.1.0
+  </text>
+  <text x="72" y="220" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400">
+    Reuse variables. Reuse mixins. Keep selectors clean.
+  </text>
+
+  <rect x="72" y="262" width="230" height="44" rx="12" fill="url(#chip)"/>
+  <text x="102" y="291" fill="#001018" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">
+    SCSS-first workflow
+  </text>
+
+  <rect x="320" y="262" width="176" height="44" rx="12" fill="url(#chip)"/>
+  <text x="352" y="291" fill="#001018" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">
+    DRY enforced
+  </text>
+
+  <rect x="514" y="262" width="180" height="44" rx="12" fill="url(#chip)"/>
+  <text x="547" y="291" fill="#001018" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">
+    BEM-aware
+  </text>
+
+  <rect x="930" y="56" width="280" height="248" rx="20" fill="#020617" fill-opacity="0.75" stroke="#334155"/>
+  <text x="956" y="98" fill="#7DD3FC" font-family="Courier New, monospace" font-size="18">$ audit</text>
+  <text x="956" y="132" fill="#94A3B8" font-family="Courier New, monospace" font-size="15">SCSS root: sass</text>
+  <text x="956" y="158" fill="#94A3B8" font-family="Courier New, monospace" font-size="15">files: 53</text>
+  <text x="956" y="184" fill="#94A3B8" font-family="Courier New, monospace" font-size="15">mixins: 8</text>
+  <text x="956" y="210" fill="#94A3B8" font-family="Courier New, monospace" font-size="15">includes: lessThanTablet</text>
+  <text x="956" y="236" fill="#94A3B8" font-family="Courier New, monospace" font-size="15">BEM selectors: detected</text>
+  <text x="956" y="262" fill="#94A3B8" font-family="Courier New, monospace" font-size="15">deep chains: flagged</text>
+</svg>
