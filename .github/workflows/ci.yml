@@ -25,6 +25,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install smoke-test dependencies
+        run: sudo apt-get update && sudo apt-get install -y ripgrep
+
       - name: Run fixture smoke tests
         run: |
           set -euo pipefail

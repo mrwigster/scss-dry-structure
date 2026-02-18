@@ -1,6 +1,6 @@
 # SCSS DRY Structure
 
-![Version](https://img.shields.io/badge/version-v1.2.0-0f766e)
+![Version](https://img.shields.io/badge/version-v1.2.1-0f766e)
 ![Codex Skill](https://img.shields.io/badge/codex-skill-0ea5e9)
 ![SCSS First](https://img.shields.io/badge/scss-first-334155)
 
@@ -23,7 +23,7 @@ This skill gives Codex a strict workflow to:
 Recommended (pinned release tag):
 
 ```bash
-$skill-installer install https://github.com/mrwigster/scss-dry-structure/tree/v1.2.0
+$skill-installer install https://github.com/mrwigster/scss-dry-structure/tree/v1.2.1
 ```
 
 Latest development branch (optional):
@@ -128,5 +128,5 @@ The bundled audit script quickly surfaces structure and conventions, for example
 
 ## Release
 
-- Current release: `v1.2.0` (2026-02-18)
-- Focus: layer-aware placement, custom-property-aware token reuse, stronger audit detection, and CI smoke tests
+- Current release: `v1.2.1` (2026-02-18)
+- Focus: CI smoke-test dependency fix (`ripgrep` install in workflow) plus all `v1.2.0` enhancements
