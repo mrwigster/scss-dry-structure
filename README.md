@@ -1,6 +1,6 @@
 # SCSS DRY Structure
 
-![Version](https://img.shields.io/badge/version-v1.2.1-0f766e)
+![Version](https://img.shields.io/github/v/release/mrwigster/scss-dry-structure?display_name=tag&label=version&color=0f766e)
 ![Codex Skill](https://img.shields.io/badge/codex-skill-0ea5e9)
 ![SCSS First](https://img.shields.io/badge/scss-first-334155)
 
