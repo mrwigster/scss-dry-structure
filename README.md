@@ -1,6 +1,6 @@
 # SCSS DRY Structure
 
-![Version](https://img.shields.io/badge/version-v1.1.0-0f766e)
+![Version](https://img.shields.io/badge/version-v1.2.0-0f766e)
 ![Codex Skill](https://img.shields.io/badge/codex-skill-0ea5e9)
 ![SCSS First](https://img.shields.io/badge/scss-first-334155)
 
@@ -20,11 +20,19 @@ This skill gives Codex a strict workflow to:
 
 ## Install (30 seconds)
 
+Recommended (pinned release tag):
+
+```bash
+$skill-installer install https://github.com/mrwigster/scss-dry-structure/tree/v1.2.0
+```
+
+Latest development branch (optional):
+
 ```bash
 $skill-installer install https://github.com/mrwigster/scss-dry-structure/tree/main
 ```
 
-Manual install:
+Manual install (main):
 
 ```bash
 git clone https://github.com/mrwigster/scss-dry-structure.git ~/.codex/skills/scss-dry-structure
@@ -36,8 +44,11 @@ From your project root:
 
 ```bash
 export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
-"$CODEX_HOME/skills/scss-dry-structure/scripts/scss_audit.sh" sass
+"$CODEX_HOME/skills/scss-dry-structure/scripts/scss_audit.sh"
 ```
+
+The script auto-detects common SCSS roots (`sass/`, `scss/`, `assets/scss/`, `public/assets/scss/`, etc.).  
+If needed, pass an explicit root path as the first argument.
 
 Then ask Codex to implement your style change using this skill.
 
@@ -92,6 +103,9 @@ The bundled audit script quickly surfaces structure and conventions, for example
 - SCSS root and entrypoints
 - import/use patterns already in place
 - existing mixins and most-used includes
+- existing CSS custom property definitions and usage hotspots
+- existing Sass variable definitions
+- cascade layer declarations and usage
 - BEM-style selector usage
 - potential deep selector chains to review
 
@@ -99,6 +113,8 @@ The bundled audit script quickly surfaces structure and conventions, for example
 
 - SCSS-first placement in existing partial architecture
 - DRY-first token reuse before adding new variables/mixins
+- custom-property-aware token reuse (`--token` / `var(--token)`)
+- layer-aware placement when `@layer` exists
 - maintainable nesting and selector depth
 - convention matching instead of style drift
 
@@ -112,5 +128,5 @@ The bundled audit script quickly surfaces structure and conventions, for example
 
 ## Release
 
-- Current release: `v1.1.0` (2026-02-16)
-- Focus: stronger onboarding, proof-oriented README, and visual polish
+- Current release: `v1.2.0` (2026-02-18)
+- Focus: layer-aware placement, custom-property-aware token reuse, stronger audit detection, and CI smoke tests

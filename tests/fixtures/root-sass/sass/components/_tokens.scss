@@ -1,0 +1,9 @@
+:root {
+  --fixture-color: #5cc6dc;
+}
+
+$fixture-gap: 1rem;
+
+@mixin tone($value) {
+  color: $value;
+}

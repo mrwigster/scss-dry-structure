@@ -71,7 +71,7 @@ body:
     attributes:
       label: Skill version
       description: Which release/version are you using?
-      placeholder: v1.1.0
+      placeholder: v1.2.0
     validations:
       required: false
 

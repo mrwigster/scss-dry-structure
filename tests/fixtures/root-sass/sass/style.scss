@@ -1,0 +1,10 @@
+@layer tokens, components;
+
+@import "components/tokens";
+
+@layer components {
+  .fixture-card {
+    @include tone(var(--fixture-color));
+    padding: $fixture-gap;
+  }
+}

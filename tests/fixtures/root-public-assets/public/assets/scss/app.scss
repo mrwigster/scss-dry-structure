@@ -1,0 +1,9 @@
+@layer tokens, utilities;
+
+@import "components/tokens";
+
+@layer utilities {
+  .u-highlight {
+    color: var(--text-accent);
+  }
+}

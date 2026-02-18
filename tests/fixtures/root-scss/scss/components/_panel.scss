@@ -1,0 +1,12 @@
+:root {
+  --panel-bg: #0c2032;
+}
+
+$panel-radius: 12px;
+
+@layer components {
+  .panel {
+    background: var(--panel-bg);
+    border-radius: $panel-radius;
+  }
+}

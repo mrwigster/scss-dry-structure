@@ -1,4 +1,4 @@
 interface:
   display_name: "SCSS DRY Structure"
-  short_description: "Enforce SCSS structure, token reuse, and convention-matching selectors"
-  default_prompt: "Implement this style change in SCSS by reusing existing variables/mixins, keeping nesting maintainable, and matching established naming conventions (including BEM where present)."
+  short_description: "Enforce SCSS structure, layer placement, token reuse, and convention-matching selectors"
+  default_prompt: "Implement this style change in SCSS by reusing existing custom properties/variables/mixins, preserving existing cascade-layer placement, keeping nesting maintainable, and matching established naming conventions (including BEM where present)."
